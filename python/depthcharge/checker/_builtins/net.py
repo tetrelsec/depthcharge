@@ -432,4 +432,26 @@ _BUILTIN_DEFS = (
 
         'affected_versions': ('2009.11-rc1', '2022.07')
     }),
+
+    ('CONFIG_CMD_NFS', True, {
+        'identifier': 'CVE-2022-30767',
+        'impact': SecurityImpact.WR_MEM,
+        'summary': 'Memory corruption can be triggered via maliciously crafted NFS messages',
+
+        'description': dedent("""\
+            Insufficient path length validation is performed in `net/nfs.c` -
+            `nfs_lookup_reply()` - prior to using `memcpy()` to copying data to
+            into a global `filefh` buffer, using a length obtained from a
+            received packet. This allows a network-resident attacker to corrupt
+            memory. NOTE: this issue exists because of an incorrect fix for 
+            CVE-2019-14196.
+        """),
+
+        'recommendation': dedent("""\
+            Update to U-Boot 2022.07-rc4 or backport the fix from commit bdbf7a05.
+            Otherwise, disable NFS support and any networking functionality that is not required.
+        """),
+
+        'affected_versions': ('2019.10', '2022.07-rc2')
+    }),
 )
