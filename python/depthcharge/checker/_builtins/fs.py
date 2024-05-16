@@ -142,7 +142,7 @@ _BUILTIN_DEFS = (
         'description': dedent("""\
             In the `ext4fs_read_file()` function, a `memcpy()` operation is performed without
             validating that the length parameter is smaller than the remaining storage in the
-            destination buffer. (The check only tests against the total size of the entire buffer
+            destination buffer. (The check only tests against the total size of the entire buffer)
 
             This stack-based buffer overflow may allow for arbitrary code execution in situations
             where it is plausible for an attacker to stage a maliciously crafted EXT4 file system,
