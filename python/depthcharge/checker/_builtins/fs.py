@@ -203,7 +203,6 @@ _BUILTIN_DEFS = (
         'recommendation': 'Update to U-Boot 2019.10 or backport the fix from commit 7aed3d38.',
 
         'affected_versions': ('2018.03-rc2', '2019.10'),
-
     }),
 
     ('CONFIG_CMD_GPT', True, {
@@ -221,4 +220,40 @@ _BUILTIN_DEFS = (
         # Command introduced in commit , issue fixed in 5749faa3
         'affected_versions': ('2013.01-rc2', '2020.04')
     }),
+
+    ('CONFIG_FS_SQUASHFS', True, {
+        'identifier': 'CVE-2022-33103',
+        'summary': 'An out-of-bounds write in the sqfs_readdir function.',
+        'impact': SecurityImpact.EXEC,
+        'description': dedent("""\
+            A statically sized directory name buffer (256 bytes) can be overflowed via an incorrectly
+            bounded `strncpy()` call. The exploitation of this vulnerability would allow writing onto
+            the stack and allow for arbitrary code execution, which is most impactful when secure boot
+            functionality otherwise has sought to prevent this.
+        """),
+
+        'recommendation': 'Update to U-Boot 2019.10 or backport the fix from commit 2ac0baab.',
+
+        'affected_versions': ('2020.10', '2022.06'),
+    }),
+
+    ('CONFIG_FS_SQUASHFS', True, {
+        'identifier': 'CVE-2022-33967',
+        'summary': 'Metadata reading of a squashfs image may lead to Denial of Service.',
+        'impact': SecurityImpact.DOS,
+        'description': dedent("""\
+            A crafted squashfs image could embed a huge number of empty metadata
+            blocks in order to make the amount of malloc()'d memory overflow and be
+            much smaller than expected. Because of this flaw, any random code
+            positioned at the right location in the squashfs image could be memcpy'd
+            from the squashfs structures into U-Boot code location while trying to
+            access the rearmost blocks, before being executed.
+        """),
+
+        'recommendation': 'Update to U-Boot 2022.07-rc6 or backport the fix from commit 7f7fb993.',
+
+        'affected_versions': ('2020.10-rc2', '2022.07-rc5'),
+    }),
+
+
 )

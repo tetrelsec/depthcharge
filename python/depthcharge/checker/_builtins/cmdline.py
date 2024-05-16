@@ -318,6 +318,18 @@ _BUILTIN_DEFS = (
         """),
     }),
 
+    ('CONFIG_CMD_I2C', True, {
+        'identifier': 'CVE-2022-34835',
+        'summary': 'A stack buffer overflow vulnerability in i2c md command allows for arbitrary code execution.',
+        'impact': SecurityImpact.EXEC,
+        'description': dedent("""\
+            On 16-bit platforms, the `i2c md` command uses a 32-bit size parameter, but then stores it
+            in an `int`. By controlling the response of an i2c device, one can overwrite the return address 
+            of a function and execute arbitrary code through Return-Oriented Programming.
+        """),
+        'recommendation': 'Update to U-Boot 2022.07 or backport the fix from commit 8f8c04bf.',
+        'affected_versions': ('2020.10-rc2', '2022.07-rc5'),
+    }),
 )
 
 # Copy config key into identifier fields
