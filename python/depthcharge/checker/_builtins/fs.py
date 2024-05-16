@@ -67,7 +67,7 @@ _BUILTIN_DEFS = (
 
     ('CONFIG_DOS_PARTITION', True, {
         'identifier': 'CVE-2019-13103',
-        'summary': 'A maliciously crafted EXT4 filesystem can induce unbounded recursion that corrupts stack memory',
+        'summary': 'A self-referential DOS partition table can induce unbounded recursion that corrupts stack memory',
         'impact': SecurityImpact.LIMITED_WR_MEM,
 
         'description': dedent("""\
