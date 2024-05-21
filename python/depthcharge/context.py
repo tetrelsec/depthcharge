@@ -80,7 +80,7 @@ from .version import __version__
 from . import log
 from . import uboot
 
-from .arch          import Architecture
+from .arch          import Architecture, NoDataAbortContent
 from .console       import Console
 from .executor      import Executor
 from .memory.reader import MemoryReader
@@ -1339,6 +1339,11 @@ class Depthcharge:
                 self._gd['jt'] = self._uboot_jump_table()
             except OperationNotSupported as error:
                 log.warning(str(error))
+            except NoDataAbortContent as error:
+                log.error('Failed to trigger a Data Abort. ' +
+                        '(The target may not respond as expected to our attempted crash operation.')
+
+                log.debug('Expected data abort output, got: ' + os.linesep + str(error))
 
         if self._gd:
             ret = deepcopy(self._gd)
