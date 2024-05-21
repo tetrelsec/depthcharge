@@ -7,6 +7,13 @@ This module provides Architecture-specific information and helper functions.
 
 from copy import copy
 
+class NoDataAbortContent(Exception):
+    """
+    This Exception denotes that we did not read the expected Data Abort content
+    from the console, likely indicating that our attempt to induce said Data
+    Abort failed. (The technique we're using might not work on the target.)
+    """
+    pass
 
 class ArchitectureProperties(type):
     """
