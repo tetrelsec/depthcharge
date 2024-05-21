@@ -1341,7 +1341,7 @@ class Depthcharge:
                 log.warning(str(error))
             except NoDataAbortContent as error:
                 log.error('Failed to trigger a Data Abort. ' +
-                        '(The target may not respond as expected to our attempted crash operation.')
+                        '(The target may not respond as expected to our attempted crash operation.)')
 
                 log.debug('Expected data abort output, got: ' + os.linesep + str(error))
 
