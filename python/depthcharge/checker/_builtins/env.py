@@ -90,60 +90,6 @@ _BUILTIN_DEFS = (
         'affected_versions': _all_versions,
     }),
 
-    ('CONFIG_ENV_IS_IN_FLASH', True,  {
-        'identifier': 'CONFIG_ENV_IS_IN_FLASH',
-        'impact': SecurityImpact.EXEC,
-        'summary': 'Environment stored in flash is vulnerable to tampering',
-        'description': _nowhere_desc,
-        'recommendation': _nowhere_recc,
-        'affected_versions': _all_versions,
-    }),
-
-    ('CONFIG_ENV_IS_IN_NVRAM', True,  {
-        'identifier': 'CONFIG_ENV_IS_IN_NVRAM',
-        'impact': SecurityImpact.EXEC,
-        'summary': 'Environment stored in NVRAM is vulnerable to tampering',
-        'description': _nowhere_desc,
-        'recommendation': _nowhere_recc,
-        'affected_versions': _all_versions,
-    }),
-
-    ('CONFIG_ENV_IS_IN_SATA', True,  {
-        'identifier': 'CONFIG_ENV_IS_IN_SATA',
-        'impact': SecurityImpact.EXEC,
-        'summary': 'Environment stored in SATA device is vulnerable to tampering',
-        'description': _nowhere_desc,
-        'recommendation': _nowhere_recc,
-        'affected_versions': _all_versions,
-    }),
-
-    ('CONFIG_ENV_IS_IN_MMC', True,  {
-        'identifier': 'CONFIG_ENV_IS_IN_MMC',
-        'impact': SecurityImpact.EXEC,
-        'summary': 'Environment stored in MMC is vulnerable to tampering',
-        'description': _nowhere_desc,
-        'recommendation': _nowhere_recc,
-        'affected_versions': _all_versions,
-    }),
-
-    ('CONFIG_ENV_IS_IN_SPI_FLASH', True,  {
-        'identifier': 'CONFIG_ENV_IS_IN_SPI_FLASH',
-        'impact': SecurityImpact.EXEC,
-        'summary': 'Environment stored in SPI flash in is vulnerable to tampering',
-        'description': _nowhere_desc,
-        'recommendation': _nowhere_recc,
-        'affected_versions': _all_versions,
-    }),
-
-    ('CONFIG_ENV_IS_IN_ONENAND', True,  {
-        'identifier': 'CONFIG_ENV_IS_IN_ONENAND',
-        'impact': SecurityImpact.EXEC,
-        'summary': 'Environment stored OneNAND in is vulnerable to tampering',
-        'description': _nowhere_desc,
-        'recommendation': _nowhere_recc,
-        'affected_versions': _all_versions,
-    }),
-
     ('CONFIG_ENV_IS_IN_EXT4', True,  {
         'identifier': 'CONFIG_ENV_IS_IN_EXT4',
         'impact': SecurityImpact.EXEC,
@@ -162,7 +108,70 @@ _BUILTIN_DEFS = (
         'affected_versions': _all_versions,
     }),
 
-    ('CONFIG_ENV_IS_IN_FAT', True,  {
+    ('CONFIG_ENV_IS_IN_FLASH', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_FLASH',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored in flash is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_MMC', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_MMC',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored in MMC is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_NAND', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_NAND',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored in NAND is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_NVRAM', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_NVRAM',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored in NVRAM is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_ONENAND', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_ONENAND',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored OneNAND in is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_SATA', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_SATA',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored in SATA device is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_SPI_FLASH', True,  {
+        'identifier': 'CONFIG_ENV_IS_IN_SPI_FLASH',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Environment stored in SPI flash in is vulnerable to tampering',
+        'description': _nowhere_desc,
+        'recommendation': _nowhere_recc,
+        'affected_versions': _all_versions,
+    }),
+
+    ('CONFIG_ENV_IS_IN_UBI', True,  {
         'identifier': 'CONFIG_ENV_IS_IN_UBI',
         'impact': SecurityImpact.EXEC,
         'summary': 'Environment stored in UBI volume is vulnerable to tampering',
