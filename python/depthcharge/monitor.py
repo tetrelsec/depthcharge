@@ -243,7 +243,9 @@ class TerminalMonitor(ColorNamedPipeMonitor):
             '-e',
             '/bin/bash -c ' +
             '"/usr/bin/sleep 0.25; /usr/bin/cat {:s}; '.format(Monitor._default_depthcharge_pipe) +
-            "read -p '\nDepthcharge operation complete. Press Enter to exit.'" + ';"'
+            "read -p '\n\033[{:d}m".format(self.UBOOT_IN_PRINTABLE) +
+            'Depthcharge operation complete. Press Enter to exit.' +
+            '\033[0m' + "';" + '"'
         ]
         self._pid = subprocess.Popen(args)
         super().__init__(Monitor._default_depthcharge_pipe)
