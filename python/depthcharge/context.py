@@ -706,10 +706,10 @@ class Depthcharge:
             unit = 'cmd'
             progress = self.create_progress_indicator(self, len(cmds), desc, unit=unit)
             try:
-                for cmd in cmds:
-                    log.debug('Reading help text for: ' + cmd)
+                for name, entry in cmds.items():
+                    log.debug('Reading help text for: ' + name)
                     progress.update()
-                    entry['details'] = self.send_command('help ' + cmd)
+                    entry['details'] = self.send_command('help ' + name)
             finally:
                 self.close_progress_indicator(progress)
 
