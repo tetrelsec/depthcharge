@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 The *depthcharge.cmdline* module provides functionality to help create consistent
 command line interfaces atop of the Depthcharge API. This includes a set of

@@ -10,7 +10,7 @@ The latest release of this code is available on the
 and can be installed via `python3 -m pip install depthcharge`.
 
 The instructions below are intended for those wishing to work with the latest
-code [available on GitHub](https://github.com/nccgroup.com/depthcharge/tree/next).
+code [available on GitHub](https://github.com/tetrelsec/tree/next).
 
 ## Python Dependencies
 

@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 AARCH64 (ARMv8-A) support
 """

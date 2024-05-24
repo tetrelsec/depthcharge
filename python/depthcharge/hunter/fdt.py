@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 Implements FDTHunter, which searches for Flattened Device Tree blobs, also commonly referred to as
 DTBs (whose corresponding "source" are DTS files).

@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 
 """
 The "top-level" of the Depthcharge's target interaction API is implemented by the
@@ -45,7 +45,7 @@ initialize the context state. Below is an example usage of :py:class:`Depthcharg
 
 With a context object in hand, one can being interacting with a target device using
 the API methods documented here. Refer to both the scripts present in
-Depthcharge's `python/examples <https://github.com/nccgroup/depthcharge/python/examples>`_
+Depthcharge's `python/examples <https://github.com/tetrelsec/depthcharge/python/examples>`_
 directory, as well as the implementation of its various utility scripts for some additional
 examples.
 
