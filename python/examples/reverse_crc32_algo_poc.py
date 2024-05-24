@@ -8,7 +8,7 @@
 # any one particular device, we use the text of Edgar Allen Poe's "The Raven"
 # to produce the text:
 #
-#   "NCC Group - Depthcharge\n<https://github.com/nccgroup/depthcharge"
+#   "Tetrel Security -- Depthcharge\n<https://github.com/tetrelsec/depthcharge"
 #
 # Instead of passing the produced Stratagem object to CRC32MemoryWriter, here
 # we simply execute a function that "executes" the Stratagem by performing
@@ -152,8 +152,8 @@ And my soul from out that shadow that lies floating on the floor
 """
 
 TARGET_PAYLOAD = (
-    b'NCC Group - Depthcharge\n'
-    b'https://github.com/nccgroup/depthcharge\n'
+    b'Tetrel Security -- Depthcharge\n'
+    b'https://github.com/tetrelsec/depthcharge\n'
 )
 
 

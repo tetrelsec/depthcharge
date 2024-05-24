@@ -1,12 +1,12 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 #
 # flake8: noqa=F401
 """
 Depthcharge: A U-Boot hacking toolkit for security researchers and tinkerers
 
 Documentation:  <https://depthcharge.readthedocs.io>
-Source Code:    <https://github.com/nccgroup/depthcharge>
+Source Code:    <https://github.com/tetrelsec/depthcharge>
 """
 
 from .version import __version__

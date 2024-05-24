@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 Depthcharge Monitor functionality can be used to observe data written to and
 read from the console interface. This can be helpful when debugging or simply
