@@ -190,5 +190,23 @@ _BUILTIN_DEFS = (
 
         # This needs to be enabled in 2021.04-rc2 onward
         'affected_versions': ('2021.04-rc2', '9999.99')
+    }),
+
+
+    ('CONFIG_IMX_HAB', True, {
+        'identifier': 'CVE-2023-39902',
+        'impact': SecurityImpact.EXEC,
+        'summary': 'Full FIT validation can lead to unauthenticated execution of code',
+        'description': dedent("""\
+            On select i.MX 8M devices, a specifically crafted FIT image could overwrite SPL 
+            memory and allow for the execution of unauthorized code. This affects i.MX 8M, 
+            i.MX 8M Mini, i.MX 8M Nano, and i.MX 8M Plus.
+        """),
+
+        'recommendation': 'Update to U-Boot to NXP BSP GA Release LF6.1.36_2.1.0 and ensure CONFIG_IMX_SPL_FIT_FDT_SIGNATURE=y.',
+
+        # FIT images introduced in 782cfbb2
+        'affected_versions': ('2013.07-rc1', '2023.07')
     })
+
 )
