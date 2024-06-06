@@ -3,7 +3,7 @@ name: Troubleshooting Request
 about: 'Ask questions or get some troubleshooting assistance '
 title: ''
 labels: troubleshooting
-assignees: jynik
+assignees: mparuzel
 
 ---
 

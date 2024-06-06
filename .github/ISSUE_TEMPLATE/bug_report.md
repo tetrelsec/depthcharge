@@ -3,7 +3,7 @@ name: Bug report
 about: 'Report a problem or unexpected failure '
 title: ''
 labels: bug
-assignees: jynik
+assignees: mparuzel
 
 ---
 
