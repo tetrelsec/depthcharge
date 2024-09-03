@@ -3,7 +3,7 @@ name: Documentation Issue
 about: Report incorrect, incomplete, or outdated documentation
 title: 'Documentation: Summary of issue'
 labels: documentation
-assignees: jynik
+assignees: mparuzel
 
 ---
 
