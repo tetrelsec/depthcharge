@@ -67,9 +67,9 @@ setup(
     long_description_content_type='text/markdown',
 
     license='BSD 3-Clause License',
-    author='Jon Szymaniak (NCC Group)',
-    author_email='jon.szymaniak.foss@gmail.com',
-    url='https://github.com/nccgroup/depthcharge',
+    author='Tetrel Security',
+    author_email='contact@tetrelsec.com',
+    url='https://github.com/tetrelsec/depthcharge',
 
     # I'm only supporting Linux at the moment,
     platform='linux',
@@ -104,7 +104,7 @@ setup(
 
     project_urls={
         'Documentation': 'https://depthcharge.readthedocs.io',
-        'Source': 'https://github.com/nccgroup/depthcharge',
-        'Issue Tracker': 'https://github.com/nccgroup/depthcharge/issues',
+        'Source': 'https://github.com/tetrelsec/depthcharge',
+        'Issue Tracker': 'https://github.com/tetrelsec/depthcharge/issues',
     },
 )

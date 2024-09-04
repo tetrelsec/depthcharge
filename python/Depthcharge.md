@@ -1,11 +1,12 @@
 # Depthcharge
 
-<img align="right" src="https://raw.githubusercontent.com/nccgroup/depthcharge/main/doc/images/depthcharge-500.png" height="265" width="265">
+<img align="right" src="https://raw.githubusercontent.com/tetrelsec/depthcharge/main/doc/images/depthcharge-500.png" height="265" width="265">
 
 ## What is Depthcharge?
 
-Depthcharge is a toolkit designed to support security research and
-"jailbreaking" of embedded platforms using the [U-Boot] bootloader.
+Depthcharge is a toolkit designed to support security research of embedded 
+platforms using the [U-Boot] bootloader.
+
 It consists of:
 
 * An extensible Python 3 [depthcharge module]
@@ -14,10 +15,10 @@ It consists of:
 * Some example ["helper" payload binaries] and build scripts to get you started with U-Boot "standalone" program-esque payloads.
 
 [U-Boot]: https://www.denx.de/wiki/U-Boot
-[depthcharge module]: https://github.com/nccgroup/depthcharge/tree/main/python/depthcharge
-[Python scripts]: https://github.com/nccgroup/depthcharge/tree/main/python/scripts
-[Depthcharge "Companion" firmware]: https://github.com/nccgroup/depthcharge/tree/main/firmware/Arduino
-["helper" payload binaries]: https://github.com/nccgroup/depthcharge/tree/main/payloads
+[depthcharge module]: https://github.com/tetrelsec/depthcharge/tree/main/python/depthcharge
+[Python scripts]: https://github.com/tetrelsec/depthcharge/tree/main/python/scripts
+[Depthcharge "Companion" firmware]: https://github.com/tetrelsec/depthcharge/tree/main/firmware/Arduino
+["helper" payload binaries]: https://github.com/tetrelsec/depthcharge/tree/main/payloads
 ["standalone"]: https://gitlab.denx.de/u-boot/u-boot/-/blob/v2020.01/doc/README.standalone
 
 
@@ -39,7 +40,7 @@ More information can be found in the [online documentation] for the Depthcharge 
 If you'd like to build this documentation for offline viewing, You can find the
 [Sphinx]-based documentation "source" in the [doc] directory.
 
-[doc]: https://github.com/nccgroup/depthcharge/tree/main/doc
+[doc]: https://github.com/tetrelsec/depthcharge/tree/main/doc
 [online documentation]: https://depthcharge.readthedocs.io
 [Sphinx]: https://www.sphinx-doc.org
 
@@ -47,7 +48,7 @@ If you'd like to build this documentation for offline viewing, You can find the
 
 The Depthcharge source repository contains two primary branches:
 
-* `main` - The latest release. This corresponds to what is available on [PyPi](https://github.com/nccgroup/depthcharge/tree/next)
+* `main` - The latest release. This corresponds to what is available on [PyPi](https://github.com/tetrelsec/depthcharge/tree/next)
 * `next` - "Bleeding edge" changes scheduled for inclusion in the next release.
 
 At each release, the contents of *next* are merged to *main* and tagged accordingly.
@@ -72,7 +73,7 @@ other than to amuse the author and add a little fun to preparing releases.
 (Maybe they'll even be useful to remember!) The codenames are song titles from
 punk bands, increasing alphabetically with each release.
 
-[CHANGELOG]: https://github.com/nccgroup/depthcharge/blob/main/CHANGELOG
+[CHANGELOG]: https://github.com/tetrelsec/depthcharge/blob/main/CHANGELOG
 [Semantic versioning]: https://semver.org
 ["unstable"]: https://semver.org/#spec-item-4
 
@@ -83,7 +84,7 @@ found in the [License.txt] file. Project files use the corresponding
 [SPDX Identifier] to denote this.
 
 [BSD 3-Clause License]: https://opensource.org/licenses/BSD-3-Clause
-[LICENSE.txt]: https://github.com/nccgroup/depthcharge/blob/main/LICENSE.txt
+[LICENSE.txt]: https://github.com/tetrelsec/depthcharge/blob/main/LICENSE.txt
 [SPDX Identifier]: https://spdx.dev/ids
 
 ## Logo

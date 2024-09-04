@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 #
 # pylint: disable=redefined-outer-name,missing-function-docstring,invalid-name
 # pylint: disable=global-statement # (Like salt and sugar; fine if used sparingly)

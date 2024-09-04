@@ -1,3 +1,14 @@
+2024-06-06: Depthcharge Release 0.6.0 ("Gacked on Anger")
+----------------------------------------------------------------------------
+
+With the support of the original author, Tetrel Security has taken over 
+maintenance of this project, and added several new checkers to cover:
+
+* CVE-2023-39902, CVE-2022-30767, CVE-2022-33103
+* CVE-2022-33967, CVE-2022-34835
+* Missing CONFIG_ENV_IS_IN_* items
+
+
 2023-04-11: Depthcharge Release 0.5.0 ("Food for Thought")
 ----------------------------------------------------------------------------
 

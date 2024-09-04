@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 #
 # Relax style and documentation requirements for unit tests.
 # pylint: disable=missing-function-docstring,missing-class-docstring,too-few-public-methods
