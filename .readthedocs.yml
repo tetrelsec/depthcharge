@@ -16,3 +16,8 @@ python:
           path: ./python
           extra_requirements:
               - docs
+
+build:
+    os: ubuntu-22.04
+    tools:
+        python: "3.8"
