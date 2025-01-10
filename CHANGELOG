@@ -1,7 +1,7 @@
 2025-01-10: Depthcharge Release 0.6.0 ("Gacked on Anger")
 ----------------------------------------------------------------------------
 
-With the support of the original author, Tetrel Security has taken over 
+With the support of the original author, Tetrel Security has resuscitated 
 maintenance of this project, and added several new checkers to cover:
 
 * CVE-2023-39902, CVE-2022-30767, CVE-2022-33103
