@@ -3,7 +3,7 @@
 Depthcharge documentation
 ==========================
 
-This is the official documentation for the free and open source *Depthcharge* project, currently maintained by `Tetrel Security`.
+This is the official documentation for the free and open source *Depthcharge* project, currently maintained by `Tetrel Security`_.
 
 Source code and releases can be found here:
 
