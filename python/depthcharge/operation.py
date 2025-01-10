@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 
 """
 This module provides the base Operation class atop which different types of operation
@@ -503,8 +503,8 @@ class OperationSet:
           ``exclude_reqts=('stratagem', 'payloads', 'companion')`` implies that any options that require
           the use of a :py:class:`Stratagem`, depend upon already-deployed payloads, or need to use a
           :py:class:`Companion` device should be excluded. The default value is
-          ``exclude_reqts=('stratage')``.
-        * An *exclude_op* keyword can be used to exclude specific instances of
+          ``exclude_reqts=('stratagem')``.
+        * An *exclude* keyword can be used to exclude specific instances of
           :py:class:`~depthcharge.Operation` from being returned. If an :py:class:`Operation` uses
           another to bootstrap itself, this can be used to exclude itself from the available
           options. A single object, list, or set may be provided. The default value is ``None``.

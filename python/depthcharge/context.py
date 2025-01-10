@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 
 """
 The "top-level" of the Depthcharge's target interaction API is implemented by the
@@ -45,7 +45,7 @@ initialize the context state. Below is an example usage of :py:class:`Depthcharg
 
 With a context object in hand, one can being interacting with a target device using
 the API methods documented here. Refer to both the scripts present in
-Depthcharge's `python/examples <https://github.com/nccgroup/depthcharge/python/examples>`_
+Depthcharge's `python/examples <https://github.com/tetrelsec/depthcharge/python/examples>`_
 directory, as well as the implementation of its various utility scripts for some additional
 examples.
 
@@ -80,7 +80,7 @@ from .version import __version__
 from . import log
 from . import uboot
 
-from .arch          import Architecture
+from .arch          import Architecture, NoDataAbortContent
 from .console       import Console
 from .executor      import Executor
 from .memory.reader import MemoryReader
@@ -706,10 +706,10 @@ class Depthcharge:
             unit = 'cmd'
             progress = self.create_progress_indicator(self, len(cmds), desc, unit=unit)
             try:
-                for cmd in cmds:
-                    log.debug('Reading help text for: ' + cmd)
+                for name, entry in cmds.items():
+                    log.debug('Reading help text for: ' + name)
                     progress.update()
-                    entry['details'] = self.send_command('help ' + cmd)
+                    entry['details'] = self.send_command('help ' + name)
             finally:
                 self.close_progress_indicator(progress)
 
@@ -1339,6 +1339,11 @@ class Depthcharge:
                 self._gd['jt'] = self._uboot_jump_table()
             except OperationNotSupported as error:
                 log.warning(str(error))
+            except NoDataAbortContent as error:
+                log.error('Failed to trigger a Data Abort. ' +
+                        '(The target may not respond as expected to our attempted crash operation.)')
+
+                log.debug('Expected data abort output, got: ' + os.linesep + str(error))
 
         if self._gd:
             ret = deepcopy(self._gd)

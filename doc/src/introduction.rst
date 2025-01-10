@@ -6,9 +6,8 @@ Introduction
 What is Depthcharge?
 --------------------
 
-Depthcharge is a toolkit designed to support security research and
-"jailbreaking" of embedded platforms using the `Das U-Boot`_ bootloader,
-herein referred to only as *"U-Boot"*.
+Depthcharge is a toolkit designed to support security research of embedded 
+platforms using the `Das U-Boot`_ bootloader, herein referred to as *"U-Boot"*.
 
 This toolkit consists of:
 
@@ -19,10 +18,10 @@ This toolkit consists of:
 
 The Depthcharge source code and releases can be found at:
 
-.. centered:: https://github.com/nccgroup/depthcharge
+.. centered:: https://github.com/tetrelsec/depthcharge
 
 .. _Das U-Boot: https://www.denx.de/wiki/U-Boot
-.. _"helper" payload binaries: https://github.com/nccgroup/depthcharge/tree/main/payloads
+.. _"helper" payload binaries: https://github.com/tetrelsec/depthcharge/tree/main/payloads
 .. _"standalone" program: https://source.denx.de/u-boot/u-boot/-/blob/v2020.01/doc/README.standalone
 
 
@@ -211,7 +210,7 @@ apparent in the below examples. Note that the second time the *go*-based read is
 
 .. image:: ../images/read-mem-demo.gif
 
-.. _memory read payload: https://github.com/nccgroup/depthcharge/blob/main/payloads/src/read_memory.c
+.. _memory read payload: https://github.com/tetrelsec/depthcharge/blob/main/payloads/src/read_memory.c
 
 And yes, we too know the tragic pain of losing hours due to an accidentally interrupted, long running memory dump.
 Memory read operations are neighborly and will return data read so far, when interrupted. This is shown below.
@@ -426,7 +425,7 @@ of the GitHub repository.
 
 .. code-block:: text
 
-    $ git clone -b next https://github.com/nccgroup/depthcharge
+    $ git clone -b next https://github.com/tetrelsec/depthcharge
     $ cd depthcharge/python
     $ python3 -m venv ./venv
     $ source ./venv/bin/activate
@@ -455,10 +454,8 @@ to build a custom SD card image containing both U-Boot and a barebones Linux
 environment. This will result in a permissive default U-Boot configuration,
 allowing you to explore a greater breadth of Depthcharge's functionality.
 
-Finally, refer to `this NCC Group blog post`_ or `this Hardwear.io webinar`_
-for some additional examples and inspiration!
+Finally, refer to the :ref:`blogtalks` for some additional examples and
+inspiration!
 
 .. _project documentation: https://depthcharge.readthedocs.io
-.. _this NCC Group blog post: https://research.nccgroup.com/2020/07/22/depthcharge
-.. _this Hardwear.io webinar: https://bit.ly/NCC-hwio-Depthcharge
 .. _Ready, Set, Yocto!: https://github.com/jynik/ready-set-yocto

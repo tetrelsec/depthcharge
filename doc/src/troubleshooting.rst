@@ -28,7 +28,7 @@ the former approach being used to redirect log output to a ``log.txt``.
     $ export DEPTHCHARGE_LOG_LEVEL=debug
     $ depthcharge-read-mem -c my_device.cfg -a 0x87f4_0124 -l 128 2> log.txt
 
-.. _issue tracker: https://github.com/nccgroup/depthcharge/issues
+.. _issue tracker: https://github.com/tetrelsec/depthcharge/issues
 
 
 Monitor Log

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BSD-3-Clause
-// Depthcharge: <https://github.com/nccgroup/depthcharge>
+// Depthcharge: <https://github.com/tetrelsec/depthcharge>
 //
 // Top-level source file for Teensy 3.6
 //  <https://www.pjrc.com/store/teensy36.html>

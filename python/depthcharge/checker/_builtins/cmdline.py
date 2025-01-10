@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 #
 # Lines with links are just going to be long.
 # flake8: noqa = E501
@@ -47,7 +47,7 @@ _BUILTIN_DEFS = (
             based upon device-unique secrets. Refer to the *Authenticated Access* section of
             the following paper for more information on this scheme.
 
-            <https://research.nccgroup.com/wp-content/uploads/2020/02/NCC-Group-Whitepaper-Microcontroller-Readback-Protection-1.pdf>
+            <https://web.archive.org/web/20231010022840/https://research.nccgroup.com/wp-content/uploads/2020/02/NCC-Group-Whitepaper-Microcontroller-Readback-Protection-1.pdf>
         """),
     }),
 
@@ -318,6 +318,18 @@ _BUILTIN_DEFS = (
         """),
     }),
 
+    ('CONFIG_CMD_I2C', True, {
+        'identifier': 'CVE-2022-34835',
+        'summary': 'A stack buffer overflow vulnerability in i2c md command allows for arbitrary code execution.',
+        'impact': SecurityImpact.EXEC,
+        'description': dedent("""\
+            On 16-bit platforms, the `i2c md` command uses a 32-bit size parameter, but then stores it
+            in an `int`. By controlling the response of an i2c device, one can overwrite the return address 
+            of a function and execute arbitrary code through Return-Oriented Programming.
+        """),
+        'recommendation': 'Update to U-Boot 2022.07 or backport the fix from commit 8f8c04bf.',
+        'affected_versions': ('2020.10-rc2', '2022.07-rc5'),
+    }),
 )
 
 # Copy config key into identifier fields

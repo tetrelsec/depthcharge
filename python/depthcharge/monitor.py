@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 Depthcharge Monitor functionality can be used to observe data written to and
 read from the console interface. This can be helpful when debugging or simply
@@ -241,9 +241,11 @@ class TerminalMonitor(ColorNamedPipeMonitor):
         args = [
             selected_term, '-T', 'Depthcharge Monitor',
             '-e',
-            '/usr/bin/sleep 0.25;'
-            "/usr/bin/cat '" + Monitor._default_depthcharge_pipe + "'; "
-            'read -P "\nDepthcharge operation complete. Press Enter to exit."'
+            '/bin/bash -c ' +
+            '"/usr/bin/sleep 0.25; /usr/bin/cat {:s}; '.format(Monitor._default_depthcharge_pipe) +
+            "read -p '\n\033[{:d}m".format(self.UBOOT_IN_PRINTABLE) +
+            'Depthcharge operation complete. Press Enter to exit.' +
+            '\033[0m' + "';" + '"'
         ]
         self._pid = subprocess.Popen(args)
         super().__init__(Monitor._default_depthcharge_pipe)

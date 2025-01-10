@@ -1,6 +1,6 @@
 
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 
 """
 Built-in SecurityRisk definitions associated with USB functionality.

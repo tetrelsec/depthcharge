@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 ARM 32-bit support
 """
@@ -7,7 +7,7 @@ ARM 32-bit support
 import os
 import re
 
-from .arch import Architecture
+from .arch import Architecture, NoDataAbortContent
 
 
 class ARM(Architecture):
@@ -106,6 +106,6 @@ class ARM(Architecture):
         if not ret:
             msg = 'No data abort content found in the following text:' + os.linesep
             msg += text
-            raise ValueError(msg)
+            raise NoDataAbortContent(msg)
 
         return ret

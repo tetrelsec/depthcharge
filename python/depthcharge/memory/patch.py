@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Depthcharge: <https://github.com/nccgroup/depthcharge>
+# Depthcharge: <https://github.com/tetrelsec/depthcharge>
 """
 The :py:class:`.MemoryPatch` and :py:class:`.MemoryPatchList` classes are
 used by :py:meth:`~depthcharge.Depthcharge.patch_memory` to described desired
