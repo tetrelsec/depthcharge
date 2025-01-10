@@ -47,7 +47,7 @@ _BUILTIN_DEFS = (
             based upon device-unique secrets. Refer to the *Authenticated Access* section of
             the following paper for more information on this scheme.
 
-            <https://research.nccgroup.com/wp-content/uploads/2020/02/NCC-Group-Whitepaper-Microcontroller-Readback-Protection-1.pdf>
+            <https://web.archive.org/web/20231010022840/https://research.nccgroup.com/wp-content/uploads/2020/02/NCC-Group-Whitepaper-Microcontroller-Readback-Protection-1.pdf>
         """),
     }),
 
